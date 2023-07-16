@@ -61,7 +61,7 @@
 ---
 ## 2021/11/02
 ### Admin_Modulo_V44_Ok.zip
-- Ajustes en la creación del qr.
+- Ajustes en la creación del qr
 - Y redireccionamiento automático en los archivos dependientes de la lectura y procesado del mismo.
 ---
 ---
