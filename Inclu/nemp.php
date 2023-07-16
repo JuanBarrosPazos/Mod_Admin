@@ -1,1 +1,0 @@
-<?php $_SESSION['nuser'] = 10; ?>

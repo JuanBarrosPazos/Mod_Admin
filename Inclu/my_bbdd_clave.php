@@ -1,1 +1,0 @@
-<?php $_SESSION['clave'] = "adm_"; ?>
