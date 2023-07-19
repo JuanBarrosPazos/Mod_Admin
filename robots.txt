@@ -1,0 +1,41 @@
+﻿
+# Indicamos a los robots dode se encuentran los archivos sitemap
+
+#sitemap: https://MiDominio.es/sitemap.txt
+
+#sitemap: http://MiDominio.es/sitemap.xml
+
+####
+# Comenzamos la directiva robots.
+
+
+# Robots.txt para http://MiDominio.es/
+
+
+# Engloba a todos los robots. # Este campo Allow con / en permite indexar todo el directorio.
+
+user-agent: *  
+
+Allow: /      
+
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Engloba a todos los robots. # Este campo Disallow con / en permite indexar todo el directorio.
+
+
+User-agent: *
+
+# Disallow: /estilos.css
+# Disallow: /images/
+# Disallow: /Scripts/

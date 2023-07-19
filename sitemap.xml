@@ -1,0 +1,26 @@
+﻿<? xml version="1.0" encoding="UTF-8" ?>
+
+
+<url>
+
+<loc> http://MiDominio.es/index.php </loc>
+
+<lastmod> 2023-01-01 </lastmod>
+
+<priority> 1.0 </ priority>
+
+</url>
+
+
+<url>
+
+<loc> http://MiDominio.es/inicio.php </loc>
+
+<lastmod> 2023-01-01 </lastmod>
+
+<priority> 1.0 </priority>
+
+</url>
+
+
+</urlset>

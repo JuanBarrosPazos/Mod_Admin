@@ -1,5 +1,5 @@
 # MÓDULO CRUD DE ADMINISTRADORES Y USUARIOS.
-## Mod_Admin_V60.zip
+## Mod_Admin V23.0.4.zip
 
 ---
 ---
@@ -40,12 +40,15 @@
 - Directamente desde desde config/index_Init_System.php 
 ---
 ---
+## 2023/07/19
+### Mod_Admin V23.0.4.zip
+- Ajustes generales de bbdd y formularios:
+---
 ## 2023/03/19
 ### Mod_Admin_V60.zip
 - Solucionados problemas:
     - Relacionados con la detección de instalaciones anteriores.
     - Con la construcción de la bbdd y configuración de campos.
----
 ---
 ## 2023/02/26
 ### Mod_Admin_V58.zip
@@ -53,57 +56,47 @@
     - Relacionados con el envio de formularios vía mail.
     - Con el constructor de la aplicación y validaciones.
 ---
----
 ## 2022/01/08
 ### Admin_Modulo_V46.zip
 - Solucionados problemas de carga asíncrona de funciones en el instalador.
----
 ---
 ## 2021/11/02
 ### Admin_Modulo_V44_Ok.zip
 - Ajustes en la creación del qr
 - Y redireccionamiento automático en los archivos dependientes de la lectura y procesado del mismo.
 ---
----
 ## 2021/05/23
 ### Admin_Modulo_V21_Ok_Botones_Paginacion_&_Hash.zip
 - Ajustes generales en qrgen, qrcam.
----
 ---
 ## 2021/05/22
 ### Admin_Modulo_V20_Ok_Botones_Paginacion_&_Hash.zip
 - Nuevas integraciones bbdd & log, qrgen, qrcam.
 - Ajustes generales de código.
 ---
----
 ## 2021/05/21
 ### Admin_Modulo_V19_Ok_Botones_Paginacion_&_Hash.zip
 - Configuración del menu usuario.
 - Ajustes generales de código.
----
 ---
 ## 2021/05/10
 ### Admin_Modulo_V12_Ok_Paginacion_&_Hash.zip
 - Configuración de la paginacion en Admin y Feedback.
 - Ajustes generales de código.
 ---
----
 ## 2021/05/09
 ### Admin_Modulo_V11_Paginacion_&_Hash.zip
 - Configuración de la paginacion en Admin y Feedback.
 - Ajustes generales de código.
----
 ---
 ## 2021/05/06
 ### Admin_Modulo_V10_Paginacion_&_Hash.zip
 - Configuración inicial de l apaginación en consultas.
 - Modificación del inicio al abrir sesión.
 ---
----
 ## 2021/05/05
 ### Admin_Modulo_V09_Con_password_hash.zip
 - Ajustes generales de codigo para gestión de administradores y log de actividad.
----
 ---
 ## 2021/05/04
 ### Admin_Modulo_V07_Ok_Sin_password_hash.zip

@@ -237,8 +237,7 @@ function modif(){
 
 function crear_tablas(){
 	
-	global $db;	
-	global $db_name;
+	global $db;	 	global $db_name;
 	global $db;	
 	global $db_host;
 	global $db_user;

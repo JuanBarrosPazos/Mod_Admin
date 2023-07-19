@@ -1,0 +1,5 @@
+﻿
+http://MiDominio.es/index.html
+http://MiDominio.es/index.php
+http://MiSubDominio.MiDominio.es/directorio/archivo.html
+http://MiSubDominio.MiDominio.es/directorio/archivo.php
