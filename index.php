@@ -1,8 +1,7 @@
 <?php
 
 	require 'Inclu/error_hidden.php';
-	global $index;
-	$index = 1;
+	global $index; 		$index = 1;
 	require 'Inclu/Admin_head.php';
 
 				   ////////////////////				   ////////////////////
@@ -32,8 +31,7 @@
 					@$db = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
 					if (!$db){ 	global $dbconecterror; // PARA LOG
 								$dbconecterror = $db_name." * ".mysqli_connect_error();
-								global $text;
-								$text = $dbconecterror;
+								global $text; 	$text = $dbconecterror;
 								ini_log();
 								print ("** NO CONECTA A BBDD ".$db_name."</br>".mysqli_connect_error());
 								show_form();
@@ -43,7 +41,7 @@
 										global $tablepf;
 										print($tablepf);
 										}
-								} // Fin else process_form()
+			} // Fin else process_form()
 		} else { inittot();
 				 show_form();}
 
@@ -572,8 +570,7 @@ function process_form(){
 	// CREA EL DIRECTORIO DE USUARIOS.
 
 	global $data0;
-	global $carpeta;
-	$carpeta = "Users";
+	global $carpeta; 	$carpeta = "Users";
 	if (!file_exists($carpeta)) {
 		mkdir($carpeta, 0777, true);
 		$data0 = "\t* OK DIRECTORIO USUARIOS.".PHP_EOL;
@@ -603,7 +600,7 @@ function process_form(){
 		require 'Inclu/my_bbdd_clave.php';
 		require 'config/Inc_Crea_Tablas.php';
 
-	}	
+	} // function crear_tablas()
 
 				   ////////////////////				   ////////////////////
 ////////////////////				////////////////////				////////////////////
@@ -794,7 +791,7 @@ function show_form($errors=[]){
 			</table>"); 
 		} // FIN PRINT TABLE
 	
-	} // FIN FUNCTION SHOW_FOMR	
+	} // FIN FUNCTION SHOW_FORM	
 
 				   ////////////////////				   ////////////////////
 ////////////////////				////////////////////				////////////////////

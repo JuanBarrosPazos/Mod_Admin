@@ -27,8 +27,7 @@
 	elseif(isset($_POST['oculto'])){
 		if($form_errors = validate_form()){
 				show_form($form_errors);
-									} else {process_form();
-														}
+						} else { process_form(); }
 	} else {show_form();
 			global $text;
 			$text = "PRIMER ADMIN MASTER CARGADO FORMULARIO INICIAL";
@@ -83,8 +82,7 @@ function validate_form(){
 
 function process_form(){
 	
-	global $db;
-	global $db_name;
+	global $db; 	global $db_name;
 	
 /*	REFERENCIA DE USUARIO	*/
 global $rf1;	global $rf2;	global $rf3;	global $rf4;
@@ -113,10 +111,7 @@ if (preg_match('/^(\w{1})*(\s\w{1})/',$_POST['Apellidos'],$ref4)){	$rf4 = $ref4[
 
 	$_SESSION['iniref'] = $rf;
 
-	/**************************************/
-	/**************************************/
-
-	global $carpetaimg;
+			////////////////////		**********  		////////////////////
 	
 	global $trf;
 	$trf = $_SESSION['iniref'];
@@ -137,14 +132,13 @@ if (preg_match('/^(\w{1})*(\s\w{1})/',$_POST['Apellidos'],$ref4)){	$rf4 = $ref4[
 		$new_name = $rf.".".$extension;
 	}
 
-	global $nombre;
-	global $apellido;
-	$nombre = $_POST['Nombre'];
-	$apellido = $_POST['Apellidos'];
+			////////////////////		**********  		////////////////////
 
+	global $nombre;		$nombre = $_POST['Nombre'];
+	global $apellido;	$apellido = $_POST['Apellidos'];
+	
 	// ENCRIPTO EL PASSWOR ANTES DE GUARDARLO EN LA BBDD
-	global $password;
-	$password = $_POST['Password'] ;
+	global $password; 		$password = $_POST['Password'] ;
 	global $passwordhash;
 	$passwordhash = password_hash($password, PASSWORD_DEFAULT, array ("cost"=>10));
 	//$passwordhash = password_hash($password, PASSWORD_DEFAULT, ['cost'=>10]);
@@ -163,7 +157,6 @@ if (preg_match('/^(\w{1})*(\s\w{1})/',$_POST['Apellidos'],$ref4)){	$rf4 = $ref4[
 										$mydni = '<?php $_SESSION[\'webmaster\'] = '.$_POST['dni'].'; ?>';
 										fwrite($fw2, $mydni);
 										fclose($fw2);
-
 
 	print( "<table align='center' style='margin-top:10px'>
 				<tr>
@@ -203,7 +196,6 @@ $text = PHP_EOL."** CREADO MASTER ADMIN 1. ".$datein.PHP_EOL."\t USER REF: ".$rf
 				global $text;
 				$text = "* ERROR BBDD, MODIFIQUE ENTRADA L187: ".mysqli_error($db);
 				ini_log();
-				
 					}
 		}
 
@@ -237,16 +229,12 @@ function modif(){
 
 function crear_tablas(){
 	
-	global $db;	 	global $db_name;
-	global $db;	
-	global $db_host;
-	global $db_user;
-	global $db_pass;
-	global $db_name;
-	global $dbconecterror;
+	global $db;	 		global $db_name;
+	global $db; 		global $db_host;
+	global $db_user; 	global $db_pass;
+	global $db_name; 	global $dbconecterror;
 	
-	global $trf;
-	$trf = $_SESSION['iniref'];
+	global $trf; 		$trf = $_SESSION['iniref'];
 	
 // CREA EL DIRECTORIO DE USUARIO.
 
@@ -315,7 +303,7 @@ function crear_tablas(){
 	$text = PHP_EOL."** CONFIG INIT ".$datein.PHP_EOL."* ".$db_name.PHP_EOL."* ".$db_host.PHP_EOL.". * ".$db_user.PHP_EOL."* ".$db_pass.PHP_EOL.$dbconecterror.$data1.$data2.$data3.PHP_EOL;
 	ini_log();
 
-	}	
+	} // FIN function crear_tablas()
 
 
 	function upImg(){
@@ -329,8 +317,8 @@ function crear_tablas(){
 			copy("untitled.png", $rename_filename);
 												}
 												
-	else{	$safe_filename = trim(str_replace('/', '', $_FILES['myimg']['name']));
-			$safe_filename = trim(str_replace('..', '', $safe_filename));
+		else{ $safe_filename = trim(str_replace('/', '', $_FILES['myimg']['name']));
+			  $safe_filename = trim(str_replace('..', '', $safe_filename));
 
 		 	$nombre = $_FILES['myimg']['name'];
 		  	$nombre_tmp = $_FILES['myimg']['tmp_name'];
@@ -363,7 +351,7 @@ function crear_tablas(){
 		
 		}
 
-	} // FIN UPIMG
+	} // FIN function upImg()
 
 				   ////////////////////				   ////////////////////
 ////////////////////				////////////////////				////////////////////
@@ -425,7 +413,7 @@ function show_form($errors=[]){
 		$imgform = "config2";
 		require '../Admin/table_crea_admin.php';
 
-	}	
+	} // FIN funcion show_form($errors=[])
 
 				   ////////////////////				   ////////////////////
 ////////////////////				////////////////////				////////////////////

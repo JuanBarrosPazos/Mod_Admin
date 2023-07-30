@@ -42,8 +42,7 @@ if (preg_match('/^(\w{1})*(\s\w{1})/',$_POST['Apellidos'],$ref4)){	$rf4 = $ref4[
 			
 	/* COMPROBAMOS SI EXISTE EL ADMINISTRADOR */
 
-		global $db;
-		global $db_name;
+		global $db; 	global $db_name;
 		
 		$admin =  "SELECT * FROM `$db_name`.$table_name_a WHERE `ref` = '$rf'";
 		$qadmin = mysqli_query($db, $admin);
@@ -51,8 +50,7 @@ if (preg_match('/^(\w{1})*(\s\w{1})/',$_POST['Apellidos'],$ref4)){	$rf4 = $ref4[
 
 		}else{
 		$cadmin = mysqli_num_rows($qadmin);
-	if($cadmin > 0){$errors [] = "YA EXISTE EL ADMINISTRADOR ".$rf;}
-
+		if($cadmin > 0){$errors [] = "YA EXISTE EL ADMINISTRADOR ".$rf;}
 		}
 		 
 	
