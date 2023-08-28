@@ -1,5 +1,4 @@
 # MÓDULO CRUD DE ADMINISTRADORES Y USUARIOS.
-## Mod_Admin V23.0.4.zip
 
 ---
 ---
@@ -40,8 +39,8 @@
 - Directamente desde desde config/index_Init_System.php 
 ---
 ---
-## 2023/07/19
-### Mod_Admin V23.0.4.zip
+## 2023/08/28
+### Mod_Admin V23.0.5.zip
 - Ajustes generales de bbdd y formularios:
 ---
 ## 2023/03/19

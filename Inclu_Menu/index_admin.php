@@ -1,5 +1,110 @@
 <?php
 
+	global $rutaindex;		
+	global $menuArticulos;		global $menuContaBasic;		
+	global $menuContacto;		global $menuAgenda;
+
+	/************	SI EXISTE EL CONSTRUCTOR DE TABLAS ARTICULOS	*****************/
+	
+	if(file_exists("../../Mod_Contenidos/index.php")){
+		$menuArticulos = "<a href='".$rutaindex."../Mod_Contenidos/index.php'>
+								<i class='ic ico19'></i><span>CONTENIDOS</span>
+							</a>";
+	} else { 
+		$menuArticulos = "<a href='#'>
+								<i class='ic ico19'></i><span>CATEGORIA 2</span>
+							</a>
+						<ul class='nav-flyout'>
+							<li>
+								<a href='#' ".$topcat2.">
+									<i class='ic ico19b'></i>OTRO LINK
+								</a>
+							</li>
+							<li>
+								<a href='#'>
+									<i class='ic ico19b'></i>OTRO LINK
+								</a>
+							</li>
+						</ul>";
+		} 
+
+	/************	COMPROBAMOS QUE EXISTE CONTA BASIC	*****************/
+
+	if(file_exists("../../Mod_Conta/index.php")){
+		$menuContaBasic = "<a href='".$rutaindex."../Mod_Conta/index.php'>
+								<i class='ic ico20'></i><span>CONTA BASIC</span>
+							</a>";
+	} else { 
+		$menuContaBasic = "<a href='#'>
+								<i class='ic ico20'></i><span>CATEGORIA 3</span>
+							</a>
+						<ul class='nav-flyout'>
+							<li>
+								<a href='#' ".$topcat3.">
+									<i class='ic ico20b'></i>OTRO LINK
+								</a>
+							</li>
+							<li>
+								<a href='#'>
+									<i class='ic ico20b'></i>OTRO LINK
+								</a>
+							</li>
+						</ul>";
+		} 
+
+	/************	COMPROBAMOS LAS TABLAS AGENDA	*****************/
+
+	if(file_exists("../Mod_Agenda/index.php")){
+		$menuAgenda = "<a href='".$rutaindex."../Mod_Agenda/index.php'>
+							<i class='ic ico19'></i><span>AGENDA</span>
+						</a>";
+	} else { 
+		$menuAgenda = "<a href='#'>
+							<i class='ic ico19'></i><span>CATEGORIA 4</span>
+						</a>
+						<ul class='nav-flyout'>
+							<li>
+								<a href='#' ".$topcat4.">
+									<i class='ic ico19b'></i>OTRO LINK
+								</a>
+							</li>
+							<li>
+								<a href='#'>
+									<i class='ic ico19b'></i>OTRO LINK
+								</a>
+							</li>
+						</ul>";
+	}
+
+
+	/************	COMPROBAMOS LAS TABLAS CONTACTO	*****************/
+
+	if(file_exists("../../Mod_Contacto/index.php")){
+		$menuContacto = "<a href='".$rutaindex."../Mod_Contacto/index.php'>
+								<i class='ic ico10'></i><span>CONTACTOS</span>
+							</a>";
+	} else { 
+		$menuContacto = "<a href='#'>
+								<i class='ic ico10'></i><span>CATEGORIA 5</span>
+							</a>
+						<ul class='nav-flyout'>
+							<li>
+								<a href='#' ".$topcat5.">
+									<i class='ic ico10b'></i>OTRO LINK
+								</a>
+							</li>
+							<li>
+								<a href='#'>
+									<i class='ic ico10b'></i>OTRO LINK
+								</a>
+							</li>
+						</ul>";
+		}
+
+
+				   ////////////////////				   ////////////////////
+////////////////////				////////////////////				////////////////////
+				 ////////////////////				  ///////////////////
 
 	print("<li>
 				<a href='#'>
@@ -54,79 +159,21 @@
 		</li>
 	</ul>
 		</li>
+
 		<li>
-			<!-- -->
-			<a href='#'>
-				<i class='ic ico19'></i><span>CATEGORIA 2</span>
-			</a>
-			<ul class='nav-flyout'>
-				<li>
-					<a href='#' ".$topcat2.">
-						<i class='ic ico19b'></i>OTRO LINK
-					</a>
-				</li>
-				<li> 
-					<a href='#'>
-						<i class='ic ico19b'></i>OTRO LINK
-					</a>
-				</li>
-			</ul>
-			
+			".$menuArticulos."
 		</li>
 	
 		<li>
-			<!-- -->
-			<a href='#'>
-				<i class='ic ico10'></i><span>CATEGORIA 3</span>
-			</a>
-			<ul class='nav-flyout'>
-				<li>
-					<a href='#' ".$topcat3.">
-						<i class='ic ico10b'></i>OTRO LINK
-					</a>
-				</li>
-				<li>
-					<a href='#'>
-						<i class='ic ico10b'></i>OTRO LINK
-					</a>
-				</li>
-			</ul>
-			
+			".$menuContaBasic."
+		</li>
+
+		<li>
+			".$menuAgenda."
 		</li>
 	
 		<li>
-			<a href='#'>
-				<i class='ic ico19'></i><span>CATEGORIA 4</span>
-			</a>
-			<ul class='nav-flyout'>
-				<li>
-					<a href='#' ".$topcat4.">
-						<i class='ic ico02b'></i>OTRO LINK
-					</a>
-				</li>
-				<li>
-					<a href='#'>
-						<i class='ic ico02b'></i>OTRO LINK
-					</a>
-				</li>
-			</ul>
-		</li>
-	
-		<li>
-			<a href='#'>
-				<i class='ic ico20'></i><span>CATEGORIA 5</span></a>
-			<ul class='nav-flyout'>
-				<li>
-					<a href='#' ".$topcat5.">
-						<i class='ic ico20b'></i>OTRO LINK
-					</a>
-				</li>
-				<li>
-					<a href='#'>
-						<i class='ic ico20b'></i>OTRO LINK
-					</a>
-				</li>
-			</ul>
+			".$menuContacto."
 		</li>
 		");
 	}else{	print("
@@ -148,8 +195,7 @@
 			</ul>
 		</li>
 		");
-
-}
+	}
 
 	print("<li>
 				<a href='".$rutaindex."Mail_Php/index.php' target='_blank'>
